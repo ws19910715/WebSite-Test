@@ -1,0 +1,121 @@
+{
+  "uid" : "f690bdaee593541a",
+  "name" : "test",
+  "fullName" : "test#test",
+  "historyId" : "30cc95016862367b5f733074708a0145",
+  "time" : {
+    "start" : 1595059704424,
+    "stop" : 1595059708381,
+    "duration" : 3957
+  },
+  "description" : "创建点检计划",
+  "descriptionHtml" : "<p>创建点检计划</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1595059696027,
+      "stop" : 1595059704422,
+      "duration" : 8395
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录用户于洪涛",
+      "time" : {
+        "start" : 1595059704422,
+        "stop" : 1595059704422,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "a381f6d8764ce981",
+      "name" : "登录",
+      "source" : "a381f6d8764ce981.attach",
+      "type" : "image/png",
+      "size" : 295644
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "创建点检计划",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "71352d86b82f0850",
+      "name" : "点检",
+      "source" : "71352d86b82f0850.attach",
+      "type" : "image/png",
+      "size" : 123686
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "login::0",
+    "time" : {
+      "start" : 1595059708381,
+      "stop" : 1595059738455,
+      "duration" : 30074
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "点检"
+  }, {
+    "name" : "suite",
+    "value" : "test"
+  }, {
+    "name" : "host",
+    "value" : "wangziqingdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "908-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f690bdaee593541a.json",
+  "parameterValues" : [ ]
+}
