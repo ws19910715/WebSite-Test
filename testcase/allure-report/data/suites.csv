@@ -1,8 +1,8 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sat Jul 18 21:15:50 CST 2020","Sat Jul 18 21:16:00 CST 2020","10124","","test","","","","test_event_1","
+"passed","Sat Jul 18 20:23:18 CST 2020","Sat Jul 18 20:23:22 CST 2020","3820","","test","","","","test","创建点检计划"
+"passed","Sun Jul 19 13:10:13 CST 2020","Sun Jul 19 13:10:23 CST 2020","10122","","test","","","","test_event_1","
     事件引擎测试用例
     新建事件
     :param login:
     :return:
     "
-"passed","Sat Jul 18 20:23:18 CST 2020","Sat Jul 18 20:23:22 CST 2020","3820","","test","","","","test","创建点检计划"

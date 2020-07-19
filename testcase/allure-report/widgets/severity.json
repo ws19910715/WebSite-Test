@@ -1,5 +1,5 @@
 [ {
-  "uid" : "d6a4b2a954a91869",
+  "uid" : "edbb02abb694733e",
   "name" : "test",
   "time" : {
     "start" : 1595074998762,
@@ -9,12 +9,12 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "2d655ab79548415f",
+  "uid" : "ba77d4aa3a3d8284",
   "name" : "test_event_1",
   "time" : {
-    "start" : 1595078150387,
-    "stop" : 1595078160511,
-    "duration" : 10124
+    "start" : 1595135413389,
+    "stop" : 1595135423511,
+    "duration" : 10122
   },
   "status" : "passed",
   "severity" : "normal"

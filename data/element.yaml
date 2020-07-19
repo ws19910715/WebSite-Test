@@ -19,4 +19,9 @@ event:
     -
         more: xpath=>//*[@id='app']/div[1]/div[1]/div/ul/div/div[1]/div/span
         menu: xpath=>//*[@id='app']/div[1]/div[1]/div/ul/div/div[2]/ul/li[1]/i[1]
+        event: xpath=>//*[@id="app"]/div/div[1]/div[2]/div[1]/div[6]/div/span
+        sjgl: xpath=>//*[@id="app"]/div/div[1]/div[2]/div[1]/div[6]/ul/li[2]/span
+        add_event: xpath=>//*[@id="app"]/div[2]/div/div[1]/div/ul/li
+        event_name: xpath=>//*[@id="app"]/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/div/input
+        Push_content: xpath=>//*[@id="app"]/div[2]/div/div[2]/div/div[1]/div[2]/div[4]/div/div[1]/div/span
 

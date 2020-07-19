@@ -5,7 +5,7 @@
     "name" : "test",
     "children" : [ {
       "name" : "test",
-      "uid" : "d6a4b2a954a91869",
+      "uid" : "edbb02abb694733e",
       "parentUid" : "ff2b04dbb9c449a4d40723f51d841925",
       "status" : "passed",
       "time" : {
@@ -18,13 +18,13 @@
       "parameters" : [ ]
     }, {
       "name" : "test_event_1",
-      "uid" : "2d655ab79548415f",
+      "uid" : "ba77d4aa3a3d8284",
       "parentUid" : "ff2b04dbb9c449a4d40723f51d841925",
       "status" : "passed",
       "time" : {
-        "start" : 1595078150387,
-        "stop" : 1595078160511,
-        "duration" : 10124
+        "start" : 1595135413389,
+        "stop" : 1595135423511,
+        "duration" : 10122
       },
       "flaky" : false,
       "newFailed" : false,

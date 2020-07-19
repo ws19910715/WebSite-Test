@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException,TimeoutException
 from selenium.webdriver.support.select import Select
+import allure
 
 
 class browser(object):
@@ -344,12 +345,15 @@ class browser(object):
             if handle != original_window:
                 self.driver.switch_to.window(handle)
 
-    def get_screen_shot(self, file_path):
+    def get_screen_shot(self, file_path,bewrite):
         """将当前窗口的屏幕截图保存到PNG图像文件中.
         用法:
         driver.get_screen_shot('/Screenshots/foo.png')
         """
         self.driver.get_screenshot_as_file(file_path)
+        with open(file_path,mode='rb')as f:
+            file=f.read()
+            allure.attach(file,bewrite)
 
     def select(self, css, value):
         """

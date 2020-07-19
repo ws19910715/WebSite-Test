@@ -27,9 +27,14 @@ def test_event_1(login):
     driver=login
     el=d['event'][0]
     driver.move_to_element(el['more'])
-    time.sleep(5)
     driver.click(el['menu'])
+    driver.click(el['event'])
+    driver.click(el['sjgl'])
     time.sleep(2)
+    driver.get_screen_shot(image_path+picture_time+"事件引擎.png",'事件引擎')
+    driver.click(el['add_event'])
+    driver.send_value(el['event_name'],'ui测试')
+
 if __name__ == "__main__":
     pytest.main(['-s','test.py::test_event_1','--alluredir=report'])
     os.system("allure generate --clean report")
