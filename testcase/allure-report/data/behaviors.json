@@ -5,7 +5,7 @@
     "name" : "点检",
     "children" : [ {
       "name" : "test",
-      "uid" : "edbb02abb694733e",
+      "uid" : "54076e7f1e0c1306",
       "parentUid" : "35d6ff4b53e59bd038ac26cfe73ae2c2",
       "status" : "passed",
       "time" : {
@@ -21,14 +21,14 @@
   }, {
     "name" : "新建事件",
     "children" : [ {
-      "name" : "test_event_1",
-      "uid" : "ba77d4aa3a3d8284",
+      "name" : "新建事件",
+      "uid" : "9a41df0b29642bab",
       "parentUid" : "90cc00b3edfab89f66e8a5459bdfd7ac",
       "status" : "passed",
       "time" : {
-        "start" : 1595135413389,
-        "stop" : 1595135423511,
-        "duration" : 10122
+        "start" : 1595146802442,
+        "stop" : 1595146824386,
+        "duration" : 21944
       },
       "flaky" : false,
       "newFailed" : false,

@@ -17,6 +17,8 @@ def test(login):
         file=f.read()
         allure.attach(file,'点检')
 @allure.feature('新建事件')
+@allure.title('新建事件')
+@allure.severity('top1')
 def test_event_1(login):
     """
     事件引擎测试用例
@@ -33,8 +35,33 @@ def test_event_1(login):
     time.sleep(2)
     driver.get_screen_shot(image_path+picture_time+"事件引擎.png",'事件引擎')
     driver.click(el['add_event'])
-    driver.send_value(el['event_name'],'ui测试')
-
+    with allure.step('新建事件'):
+        driver.send_value(el['event_name'],'ui测试')
+        print('事件名称为：ui测试')
+        driver.click(el['Push_content'])
+        time.sleep(3)
+    driver.click(el['xzts'])
+    driver.click(el['add_dx'])
+    driver.click(el['xzdx'])
+    driver.click(el['bc'])
+    driver.click(el['add_tsdx'])
+    driver.click(el['xzry'])
+    driver.click(el['gxry'])
+    driver.click(el['gb'])
+    driver.click(el['tjtj'])
+    time.sleep(2)
+    driver.get_screen_shot(image_path+picture_time+".png",'新建事件')
+    time.sleep(2)
+    driver.click(el['qr'])
+    time.sleep(2)
+    driver.get_screen_shot(image_path+picture_time+".png",'事件列表')
+    event_name=driver.get_text(el['sjmc'])
+    if event_name=='ui测试':
+        driver.click(el['del_sj'])
+        driver.click(el['qr_del'])
+        print('第一个事件名称：%s'%event_name)
+    else:
+        print('第一个事件名称：%s'%event_name)
 if __name__ == "__main__":
-    pytest.main(['-s','test.py::test_event_1','--alluredir=report'])
+    pytest.main(['-s','-q','test.py::test_event_1','--alluredir=report'])
     os.system("allure generate --clean report")

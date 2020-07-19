@@ -1,0 +1,104 @@
+{
+  "uid" : "ab98304725457ccc",
+  "name" : "test_event_1",
+  "fullName" : "test#test_event_1",
+  "historyId" : "576249f0da62e0c90c00d67bb671bc45",
+  "time" : {
+    "start" : 1595078150387,
+    "stop" : 1595078160511,
+    "duration" : 10124
+  },
+  "description" : "\n    事件引擎测试用例\n    新建事件\n    :param login:\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>事件引擎测试用例\n新建事件\n:param login:\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1595078142226,
+      "stop" : 1595078150385,
+      "duration" : 8159
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录用户于洪涛",
+      "time" : {
+        "start" : 1595078150385,
+        "stop" : 1595078150385,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "355c3c98cbda2109",
+      "name" : "登录",
+      "source" : "355c3c98cbda2109.attach",
+      "type" : "image/png",
+      "size" : 295938
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "login::0",
+    "time" : {
+      "start" : 1595078160512,
+      "stop" : 1595078190557,
+      "duration" : 30045
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "新建事件"
+  }, {
+    "name" : "suite",
+    "value" : "test"
+  }, {
+    "name" : "host",
+    "value" : "wangziqingdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "8181-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ab98304725457ccc.json",
+  "parameterValues" : [ ]
+}

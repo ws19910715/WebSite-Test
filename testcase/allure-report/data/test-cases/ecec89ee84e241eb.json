@@ -1,0 +1,142 @@
+{
+  "uid" : "ecec89ee84e241eb",
+  "name" : "test_event_1",
+  "fullName" : "test#test_event_1",
+  "historyId" : "576249f0da62e0c90c00d67bb671bc45",
+  "time" : {
+    "start" : 1595145411576,
+    "stop" : 1595145430852,
+    "duration" : 19276
+  },
+  "description" : "\n    事件引擎测试用例\n    新建事件\n    :param login:\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>事件引擎测试用例\n新建事件\n:param login:\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1595145403400,
+      "stop" : 1595145411572,
+      "duration" : 8172
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录用户于洪涛",
+      "time" : {
+        "start" : 1595145411571,
+        "stop" : 1595145411572,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "bb69f57e4d9a3ed5",
+      "name" : "登录",
+      "source" : "bb69f57e4d9a3ed5.attach",
+      "type" : "image/png",
+      "size" : 297712
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    事件引擎测试用例\n    新建事件\n    :param login:\n    :return:\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "新建事件",
+      "time" : {
+        "start" : 1595145422157,
+        "stop" : 1595145425905,
+        "duration" : 3748
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "117018b5d17bbef7",
+      "name" : "事件引擎",
+      "source" : "117018b5d17bbef7.attach",
+      "type" : "image/png",
+      "size" : 167113
+    }, {
+      "uid" : "a86423a4b2fdb6d1",
+      "name" : "新建事件",
+      "source" : "a86423a4b2fdb6d1.attach",
+      "type" : "image/png",
+      "size" : 130423
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "login::0",
+    "time" : {
+      "start" : 1595145430854,
+      "stop" : 1595145460945,
+      "duration" : 30091
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "新建事件"
+  }, {
+    "name" : "suite",
+    "value" : "test"
+  }, {
+    "name" : "host",
+    "value" : "wangziqingdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "17000-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ecec89ee84e241eb.json",
+  "parameterValues" : [ ]
+}

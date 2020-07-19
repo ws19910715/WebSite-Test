@@ -1,0 +1,371 @@
+{
+  "uid" : "9a41df0b29642bab",
+  "name" : "新建事件",
+  "fullName" : "test#test_event_1",
+  "historyId" : "576249f0da62e0c90c00d67bb671bc45",
+  "time" : {
+    "start" : 1595146802442,
+    "stop" : 1595146824386,
+    "duration" : 21944
+  },
+  "description" : "\n    事件引擎测试用例\n    新建事件\n    :param login:\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>事件引擎测试用例\n新建事件\n:param login:\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1595146792292,
+      "stop" : 1595146802434,
+      "duration" : 10142
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录用户于洪涛",
+      "time" : {
+        "start" : 1595146802433,
+        "stop" : 1595146802433,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "b10654a0fbd34ea6",
+      "name" : "登录",
+      "source" : "b10654a0fbd34ea6.attach",
+      "type" : "image/png",
+      "size" : 304485
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    事件引擎测试用例\n    新建事件\n    :param login:\n    :return:\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "新建事件",
+      "time" : {
+        "start" : 1595146812503,
+        "stop" : 1595146816192,
+        "duration" : 3689
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "c9c8395c339636c1",
+      "name" : "事件引擎",
+      "source" : "c9c8395c339636c1.attach",
+      "type" : "image/png",
+      "size" : 167209
+    }, {
+      "uid" : "c330c37908d1b5e3",
+      "name" : "新建事件",
+      "source" : "c330c37908d1b5e3.attach",
+      "type" : "image/png",
+      "size" : 156889
+    }, {
+      "uid" : "64df12df676b4f8a",
+      "name" : "事件列表",
+      "source" : "64df12df676b4f8a.attach",
+      "type" : "image/png",
+      "size" : 181237
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "login::0",
+    "time" : {
+      "start" : 1595146824389,
+      "stop" : 1595146854426,
+      "duration" : 30037
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "top1"
+  }, {
+    "name" : "feature",
+    "value" : "新建事件"
+  }, {
+    "name" : "suite",
+    "value" : "test"
+  }, {
+    "name" : "host",
+    "value" : "wangziqingdeMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "17604-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "28c6a4e5e1183f40",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595145921609,
+        "stop" : 1595145942671,
+        "duration" : 21062
+      }
+    }, {
+      "uid" : "ecec89ee84e241eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595145411576,
+        "stop" : 1595145430852,
+        "duration" : 19276
+      }
+    }, {
+      "uid" : "e8bf7a9d480b3567",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595145328878,
+        "stop" : 1595145357637,
+        "duration" : 28759
+      }
+    }, {
+      "uid" : "24b83dd2cc9f7a75",
+      "status" : "broken",
+      "statusDetails" : "KeyError: 'username'",
+      "time" : {
+        "start" : 1595145242773,
+        "stop" : 1595145260740,
+        "duration" : 17967
+      }
+    }, {
+      "uid" : "a30035e207908319",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595144364755,
+        "stop" : 1595144381127,
+        "duration" : 16372
+      }
+    }, {
+      "uid" : "15032975cc6e5c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595143608159,
+        "stop" : 1595143624704,
+        "duration" : 16545
+      }
+    }, {
+      "uid" : "81ff20e3fb024de0",
+      "status" : "broken",
+      "statusDetails" : "KeyError: 'tjlj'",
+      "time" : {
+        "start" : 1595143431983,
+        "stop" : 1595143447454,
+        "duration" : 15471
+      }
+    }, {
+      "uid" : "5749d60b689b034b",
+      "status" : "broken",
+      "statusDetails" : "KeyError: 'tjlj'",
+      "time" : {
+        "start" : 1595142773123,
+        "stop" : 1595142789654,
+        "duration" : 16531
+      }
+    }, {
+      "uid" : "75bf36b7c9a8f181",
+      "status" : "broken",
+      "statusDetails" : "KeyError: 'add_tx'",
+      "time" : {
+        "start" : 1595142678152,
+        "stop" : 1595142706478,
+        "duration" : 28326
+      }
+    }, {
+      "uid" : "2214e0a07c09610a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595139278904,
+        "stop" : 1595139292227,
+        "duration" : 13323
+      }
+    }, {
+      "uid" : "f5191de70eb77ec3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595138801753,
+        "stop" : 1595138824806,
+        "duration" : 23053
+      }
+    }, {
+      "uid" : "adf67339b18b9841",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/Users/wangziqing/PycharmProjects/ui自动化/image/2020-07-19-14_05登录.png'",
+      "time" : {
+        "start" : 1595138739001,
+        "stop" : 1595138739001,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "80f3320805171731",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595135413389,
+        "stop" : 1595135423511,
+        "duration" : 10122
+      }
+    }, {
+      "uid" : "e786d66a43b8abe7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595133353163,
+        "stop" : 1595133364818,
+        "duration" : 11655
+      }
+    }, {
+      "uid" : "e319714877a6170a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595132954940,
+        "stop" : 1595132964999,
+        "duration" : 10059
+      }
+    }, {
+      "uid" : "c270ea25d2a65a2e",
+      "status" : "broken",
+      "statusDetails" : "ValueError: remove: embedded null character in path",
+      "time" : {
+        "start" : 1595132883348,
+        "stop" : 1595132893112,
+        "duration" : 9764
+      }
+    }, {
+      "uid" : "ab98304725457ccc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595078150387,
+        "stop" : 1595078160511,
+        "duration" : 10124
+      }
+    }, {
+      "uid" : "98d60575cf81f087",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595078042077,
+        "stop" : 1595078050237,
+        "duration" : 8160
+      }
+    }, {
+      "uid" : "f010bce8ae95875",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595077980677,
+        "stop" : 1595077988715,
+        "duration" : 8038
+      }
+    }, {
+      "uid" : "604f8236e06ac6dd",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div[1]/div[1]/div/ul/div/div[2]/ul/li[3]/span\"}\n  (Session info: chrome=83.0.4103.116)",
+      "time" : {
+        "start" : 1595077668551,
+        "stop" : 1595077714917,
+        "duration" : 46366
+      }
+    }, {
+      "uid" : "7e96f25941f09888",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595077584605,
+        "stop" : 1595077592887,
+        "duration" : 8282
+      }
+    }, {
+      "uid" : "71e4cb3eee1a892b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595077532003,
+        "stop" : 1595077535256,
+        "duration" : 3253
+      }
+    }, {
+      "uid" : "ea235f8ec779aa49",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: chrome=83.0.4103.116)",
+      "time" : {
+        "start" : 1595077331054,
+        "stop" : 1595077351468,
+        "duration" : 20414
+      }
+    }, {
+      "uid" : "b9af2a9837ffcba2",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable\n  (Session info: chrome=83.0.4103.116)",
+      "time" : {
+        "start" : 1595077106357,
+        "stop" : 1595077106832,
+        "duration" : 475
+      }
+    }, {
+      "uid" : "15db62d4952196da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595076552781,
+        "stop" : 1595076553089,
+        "duration" : 308
+      }
+    }, {
+      "uid" : "7383a6cb97194728",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"newMenuxiangxia iconfont down\"}\n  (Session info: chrome=83.0.4103.116)",
+      "time" : {
+        "start" : 1595076190514,
+        "stop" : 1595076231555,
+        "duration" : 41041
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9a41df0b29642bab.json",
+  "parameterValues" : [ ]
+}
