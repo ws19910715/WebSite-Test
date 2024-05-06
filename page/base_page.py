@@ -7,97 +7,69 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException,TimeoutException
 from selenium.webdriver.support.select import Select
 import allure
+import re
 
-
-class browser(object):
+class BasePage:
     """
-    selenium框架的主要类
+    Selenium框架的主要类
     """
     original_window = None
 
-    def __init__(self, browser='chrome'):
+    def __init__(self, driver:webdriver):
         """
-        运行初始化方法默认chrome，当然，你也可以传入一个其他浏览器名称，
+        初始化BasePage类
+        :param driver: WebDriver实例
         """
-        if browser == "firefox" or browser == "ff":
-            self.driver = webdriver.Firefox()
-        elif browser == "chrome":
-            self.driver = webdriver.Chrome()
-        elif browser == "internet explorer" or browser == "ie":
-            self.driver = webdriver.Ie()
-        elif browser == "opera":
-            self.driver = webdriver.Opera()
-        elif browser == "chrome_headless":
-            chrome_options = Options()
-            chrome_options.add_argument('--headless')
-            self.driver = webdriver.Chrome(chrome_options=chrome_options)
-        elif browser == 'edge':
-            self.driver = webdriver.Edge()
-        else:
-            raise NameError(
-                "找不到 %s 浏览器,你应该从这里面选取一个 'ie', 'ff', 'opera', 'edge', 'chrome' or 'chrome_headless'." % browser)
+        self.driver = driver
 
     def element_wait(self, by, value, secs=5):
         """
         等待元素显示
+        :param by: 元素定位方式
+        :param value: 元素定位值
+        :param secs: 超时时间
         """
+        locators = {
+            "id": By.ID,
+            "name": By.NAME,
+            "class": By.CLASS_NAME,
+            "link_text": By.LINK_TEXT,
+            "xpath": By.XPATH,
+            "css": By.CSS_SELECTOR
+        }
         try:
-            if by == "id":
-                WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.ID, value)))
-            elif by == "name":
-                WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.NAME, value)))
-            elif by == "class":
-                WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.CLASS_NAME, value)))
-            elif by == "link_text":
-                WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.LINK_TEXT, value)))
-            elif by == "xpath":
-                WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.XPATH, value)))
-            elif by == "css":
-                WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.CSS_SELECTOR, value)))
-            else:
-                raise NoSuchElementException(
-                    "找不到元素，请检查语法或元素")
+            WebDriverWait(self.driver, secs).until(EC.presence_of_element_located((locators[by], value)))
         except TimeoutException:
-            print("查找元素超时请检查元素")
+            print(f"查找元素超时，请检查元素定位方式 '{by}' 和值 '{value}'")
 
     def get_element(self, css):
         """
-        判断元素定位方式，并返回元素
+        根据传入的定位方式和值，获取页面元素
+        :param css: 元素定位方式和值，格式为"定位方式=>值"
+        :return: WebElement对象
         """
         self.driver.implicitly_wait(20)
-        if "=>" not in css:
-            by = "css"  # 如果是css的格式是#aaa,所以在此加入判断如果不包含=>就默认是css传给上面的element_wait判断元素是否存在
-            value = css
-            # wait element.
-            self.element_wait(by, css)
-        else:
-            by = css.split("=>")[0]
-            value = css.split("=>")[1]
-            if by == "" or value == "":
-                raise NameError(
-                    "语法错误，参考: 'id=>kw 或 xpath=>//*[@id='kw'].")
+        # 使用正则表达式检查定位方式和值的格式
+        match = re.match(r"^(id|name|class|link_text|xpath|css)=>(.+)$", css)
+        if match:
+            by = match.group(1)
+            value = match.group(2)
             self.element_wait(by, value)
-
-        if by == "id":
-            element = self.driver.find_element_by_id(value)
-        elif by == "name":
-            element = self.driver.find_element_by_name(value)
-        elif by == "class":
-            element = self.driver.find_element_by_class_name(value)
-        elif by == "link_text":
-            element = self.driver.find_element_by_link_text(value)
-        elif by == "xpath":
-            element = self.driver.find_element_by_xpath(value)  # 如果是xpath要以此格式传入xpath=>//*[@id='su']
-        elif by == "css":
-            element = self.driver.find_element_by_css_selector(value)
+            locators = {
+                "id": By.ID,
+                "name": By.NAME,
+                "class": By.CLASS_NAME,
+                "link_text": By.LINK_TEXT,
+                "xpath": By.XPATH,
+                "css": By.CSS_SELECTOR
+            }
+            locator = (locators[by], value)
+            return self.driver.find_element(*locator)
         else:
-            raise NameError(
-                "Please enter the correct targeting elements,'id','name','class','link_text','xpath','css'.")
-        return element
+            raise ValueError("语法错误，请参考：'id=>kw' 或 'xpath=>//*[@id='kw']'")
 
     def open(self, url):
         """
@@ -376,4 +348,7 @@ class browser(object):
 
 
 if __name__ == '__main__':
-    driver = browser("chrome")
+    from utils.utils import select_browser
+    driver = BasePage(select_browser())
+    driver.open('https://demo.ziyun-cloud.com/iotconsoleEnterprise/login')
+    driver.send_value('xpath=>//*[@id="ziyun-container"]/div/div[1]/div/div/div[3]/div[3]/span/input','test')
