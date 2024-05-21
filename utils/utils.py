@@ -4,6 +4,7 @@
 @File    : utils.py
 @IDE     : PyCharm
 """
+import shutil
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
@@ -14,12 +15,11 @@ def select_browser(browser='chrome'):
         driver = webdriver.Chrome()
     elif browser == "internet explorer" or browser == "ie":
         driver = webdriver.Ie()
-    elif browser == "opera":
-        driver = webdriver.Opera()
     elif browser == "chrome_headless":
         chrome_options = Options()
         chrome_options.add_argument('--headless')
-        driver = webdriver.Chrome(chrome_options=chrome_options)
+        chrome_options.add_argument("--window-size=1920,1080")
+        driver = webdriver.Chrome(options=chrome_options)
     elif browser == 'edge':
         driver = webdriver.Edge()
     else:
@@ -29,3 +29,16 @@ def select_browser(browser='chrome'):
 
 def get_now():
     return time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
+
+
+def remove_folders(path):
+    """
+    删除指定目录下的 Allure 报告文件夹。
+    """
+    try:
+        shutil.rmtree(path)
+        print(f'成功删除目录：{path}')
+    except FileNotFoundError:
+        print(f'目录不存在：{path}')
+    except Exception as e:
+        print(f'删除目录时出错：{e}')

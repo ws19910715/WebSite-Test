@@ -7,10 +7,12 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException,TimeoutException
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.select import Select
 import allure
 import re
+from utils.utils import get_now
+from config.config import IMAGE_PATH
 
 class BasePage:
     """
@@ -25,7 +27,7 @@ class BasePage:
         """
         self.driver = driver
 
-    def element_wait(self, by, value, secs=5):
+    def element_wait(self, by, value, secs=10):
         """
         等待元素显示
         :param by: 元素定位方式
@@ -184,6 +186,7 @@ class BasePage:
         """
         self.driver.quit()
 
+
     def submit(self, css):
         """
         提交指定的表单
@@ -193,7 +196,7 @@ class BasePage:
         el = self.get_element(css)
         el.submit()
 
-    def F5(self):
+    def refresh_page(self):
         """
         刷新当前页面.
         用法:
@@ -317,15 +320,18 @@ class BasePage:
             if handle != original_window:
                 self.driver.switch_to.window(handle)
 
-    def get_screen_shot(self, file_path,bewrite):
+    def get_screen_shot(self, bewrite):
         """将当前窗口的屏幕截图保存到PNG图像文件中.
         用法:
         driver.get_screen_shot('/Screenshots/foo.png')
         """
+        file_path =IMAGE_PATH + get_now()+bewrite+'.png'
         self.driver.get_screenshot_as_file(file_path)
         with open(file_path,mode='rb')as f:
             file=f.read()
             allure.attach(file,bewrite)
+    def fallback(self):
+        self.driver.back()
 
     def select(self, css, value):
         """
@@ -347,8 +353,3 @@ class BasePage:
         Select(el).select_by_value(value)
 
 
-if __name__ == '__main__':
-    from utils.utils import select_browser
-    driver = BasePage(select_browser())
-    driver.open('https://demo.ziyun-cloud.com/iotconsoleEnterprise/login')
-    driver.send_value('xpath=>//*[@id="ziyun-container"]/div/div[1]/div/div/div[3]/div[3]/span/input','test')
